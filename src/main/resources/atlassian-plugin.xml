@@ -1,0 +1,32 @@
+<atlassian-plugin key="${project.groupId}.${project.artifactId}" name="${project.name}" plugins-version="2">
+    <plugin-info>
+        <description>${project.description}</description>
+        <version>${project.version}</version>
+        <vendor name="${project.organization.name}" url="${project.organization.url}" />
+        <param name="plugin-icon">images/pluginIcon.png</param>
+        <param name="plugin-logo">images/pluginLogo.png</param>
+    </plugin-info>
+
+    <!-- add our i18n resource -->
+    <resource type="i18n" name="i18n" location="gdoc"/>
+    
+    <!-- add our web resources -->
+    <web-resource key="gdoc-resources" name="gdoc Web Resources">
+        <dependency>com.atlassian.auiplugin:ajs</dependency>
+        
+        <resource type="download" name="gdoc.css" location="/css/gdoc.css"/>
+        <resource type="download" name="gdoc.js" location="/js/gdoc.js"/>
+        <resource type="download" name="images/" location="/images"/>
+
+        <context>gdoc</context>
+    </web-resource>
+    
+    <!-- publish our component -->
+    <component key="myPluginComponent" class="fi.viljami.confluence.gdoc.MyPluginComponentImpl" public="true">
+        <interface>fi.viljami.confluence.gdoc.MyPluginComponent</interface>
+    </component>
+    
+    <!-- import from the product container -->
+    <component-import key="applicationProperties" interface="com.atlassian.sal.api.ApplicationProperties" />
+    
+</atlassian-plugin>

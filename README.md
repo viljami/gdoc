@@ -25,10 +25,13 @@ https://developer.atlassian.com/display/DOCS/Introduction+to+the+Atlassian+Plugi
 
 ## Other
 
-The work is based on these valuable links:
+The work is based on these links:
  * https://developer.atlassian.com/display/DOCS/Set+Up+the+Eclipse+IDE+for+Linux
- * https://developer.atlassian.com/display/CONFDEV/Writing+Macros+for+Pre-4.0+Versions+of+Confluence
+ * https://developers.google.com/drive/examples/java
+ * https://developers.google.com/drive/v2/reference/
 
+During development remember this:
+ * http://localhot:1990/confluence/plugins/servlet/fastdev
 
 ## Licence
 

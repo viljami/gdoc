@@ -26,4 +26,24 @@ https://developer.atlassian.com/display/DOCS/Introduction+to+the+Atlassian+Plugi
 ## Other
 
 The work is based on these valuable links:
+ * https://developer.atlassian.com/display/DOCS/Set+Up+the+Eclipse+IDE+for+Linux
  * https://developer.atlassian.com/display/CONFDEV/Writing+Macros+for+Pre-4.0+Versions+of+Confluence
+
+
+## Licence
+
+Google Documents On Confluence ( GDOC ) displays users google documents on Confluence.
+Copyright (C) 2013  Viljami Peltola
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.

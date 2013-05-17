@@ -11,6 +11,7 @@
     <resource type="i18n" name="i18n" location="gdoc"/>
     
     <!-- add our web resources -->
+    
     <web-resource key="gdoc-resources" name="gdoc Web Resources">
         <dependency>com.atlassian.auiplugin:ajs</dependency>
         
@@ -22,11 +23,19 @@
     </web-resource>
     
     <!-- publish our component -->
+    <!--
     <component key="myPluginComponent" class="fi.viljami.confluence.gdoc.MyPluginComponentImpl" public="true">
         <interface>fi.viljami.confluence.gdoc.MyPluginComponent</interface>
     </component>
-    
+    -->
     <!-- import from the product container -->
+    <!--
     <component-import key="applicationProperties" interface="com.atlassian.sal.api.ApplicationProperties" />
-    
+    -->
+
+    <!-- public macro -->
+    <xhtml-macro name="gdoc" class="fi.viljami.confluence.gdoc.GdocMacro" key="gdoc">
+        <parameters/>
+    </xhtml-macro>
+
 </atlassian-plugin>

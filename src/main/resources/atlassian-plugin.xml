@@ -42,10 +42,8 @@
     </servlet>
 
     <!-- http://localhost:1990/confluence/plugins/servlet/oauth2callback -->
-<!--
-    <servlet name="oauth2callback" class="fi.viljami.confluence.gdoc.GoogleOauth2" key="oauth2callback" >
+    <servlet name="oauth2callback" class="fi.viljami.confluence.gdoc.GdocGoogleOauth2" key="oauth2callback" >
         <url-pattern>/oauth2callback</url-pattern>
     </servlet>
---> 
     
 </atlassian-plugin>

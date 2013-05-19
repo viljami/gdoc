@@ -80,32 +80,44 @@ public class GdocGoogleOauth2 extends HttpServlet {
 	    
 	    Drive drive = new Drive.Builder( httpTransport, jsonFactory, googleCredential).build();
 	    List<File> files = retrieveAllFiles( drive );
-	    
+	   	List<String> titles = getFileTitles( files );
+
+	   	System.out.println( drive );
+	   	System.out.println( files );
+	   	System.out.println( titles );
+
 	    HttpSession session = req.getSession();
-	    session.setAttribute( "files", files );
+	    session.setAttribute( "files", titles );
 	    
-	    try {
-			res.getWriter().print("OK");
-		} catch (IOException e) {
-			throw new RuntimeException(e);
-		}
+	    res.sendRedirect("/confluence");
 	}
 
-	private static List<File> retrieveAllFiles(Drive drive) throws IOException {
+	private static List<File> retrieveAllFiles( Drive drive ) throws IOException {
 		List<File> result = new ArrayList<File>();
 		Files.List request = drive.files().list();
 		
+		System.out.println( request );
+
 		do {
 			try {
 				FileList files = request.execute();
+				System.out.println( files );
 				result.addAll(files.getItems());
 				request.setPageToken(files.getNextPageToken());
 			} catch (IOException e) {
 				System.out.println("An error occurred: " + e);
 				request.setPageToken(null);
 			}
-		} while (request.getPageToken() != null &&
-		request.getPageToken().length() > 0);
+		} while (request.getPageToken() != null && request.getPageToken().length() > 0);
+		System.out.println( result );
 		return result;
 	}
+
+	private static List<String> getFileTitles( List<File> files ) {
+		List<String> titles = new ArrayList<String>();
+		for( int i = 0; i < files.size(); i++ ){
+			titles.add( files.get( i ).getTitle() );
+		}
+		return titles;
+	}	
 }

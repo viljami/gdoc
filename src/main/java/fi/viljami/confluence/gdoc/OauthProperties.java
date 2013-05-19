@@ -20,7 +20,7 @@ public class OauthProperties {
 
     private static final String CLIENT_ID = "258701595351.apps.googleusercontent.com";
     private static final String CLIENT_SECRET = "yhKkvja6zsbB8mib03XZkuCO";
-	private static final String REDIRECT_URI = "http://viljamipeltola.com/confluence/gdoc/oauth2callback";
+	private static final String REDIRECT_URI = "http://localhost:1990/confluence/plugins/servlet/oauth2callback";
 
 	private static final String AUTH_URI = "https://accounts.google.com/o/oauth2/auth";
 	private static final String TOKEN_URI = "https://accounts.google.com/o/oauth2/token";

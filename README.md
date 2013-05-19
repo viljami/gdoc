@@ -2,6 +2,19 @@
 
 Google Documents On Confluence
 
+## Logic
+
+When macro is added to a page. It displays link to Google's authentication. When authentication is ready the page updates automatically its content. The content currently is a simple pre element filled with data.
+
+## TODO:
+ * Smart user management for oauth
+ * smart token management (refresh)
+ * How macro will react when there is multiple macros on same page.
+ * Save Gdocs to page (and let user to choose which)
+ * Show fully embedded documents 
+ * Edit embedded documents
+ * Define a purpose for the plugin...
+
 ## Setup
 
 1. Setup Atlassian Plugin SDK 
@@ -26,15 +39,6 @@ Here are the SDK commands you'll use immediately:
 Full documentation is always available at:
 
 https://developer.atlassian.com/display/DOCS/Introduction+to+the+Atlassian+Plugin+SDK
-
-## TODO:
- * Smart user management for oauth
- * smart token management (refresh)
- * How macro will react when there is multiple macros on same page.
- * Save Gdocs to page (and let user to choose which)
- * Show fully embedded documents 
- * Edit embedded documents
- * Define a purpose for the plugin...
 
 ## Other
 

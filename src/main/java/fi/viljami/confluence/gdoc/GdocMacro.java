@@ -22,6 +22,11 @@ import com.atlassian.confluence.xhtml.api.MacroDefinitionHandler;
 import com.atlassian.confluence.xhtml.api.XhtmlContent;
 import com.google.api.client.googleapis.auth.oauth2.GoogleAuthorizationCodeRequestUrl;
 
+import com.google.api.services.drive.Drive;
+import com.google.api.services.drive.Drive.Files;
+import com.google.api.services.drive.model.File;
+import com.google.api.services.drive.model.FileList;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -76,7 +81,7 @@ public class GdocMacro implements Macro
         builder.append("<p class=\"bold\">Google Documents On Confluence</p>");
         if ( !macros.isEmpty() )
         {
-        	builder.append("<p><a href=\"" + getConnectGoogleURL() + "\" target=\"_blank\">Google Authenticate.</a></p>");
+            builder.append("<p><a href=\"" + getConnectGoogleURL() + "\" target=\"_blank\">Google Authenticate.</a></p>");
         }
         builder.append("</div>");
 

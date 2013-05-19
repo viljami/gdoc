@@ -14,6 +14,8 @@
 package fi.viljami.confluence.gdoc;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -32,11 +34,14 @@ public class GdocServlet extends HttpServlet {
     
 	@Override
 	public void doGet(HttpServletRequest req, HttpServletResponse res) throws IOException, ServletException {
-		Object files = req.getSession().getAttribute("files");
-		if( files == null ) {
-			files = new Object();
+		Object titleObjs = req.getSession().getAttribute("files");
+		List<String> titles = null;
+		if( titleObjs == null ) {
+			titles = new ArrayList<String>();
+		} else {
+			titles = (List<String>)titleObjs;
 		}
-		sendJson( res, files );
+		sendJson( res, titles );
 	}
 	
 	protected void sendJson(HttpServletResponse res, int responceCode, Object obj) {

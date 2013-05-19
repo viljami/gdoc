@@ -10,14 +10,28 @@
     <version>1.0-SNAPSHOT</version>
 
     <organization>
-        <name>Viljami Peltola</name>
-        <url>http://viljamipeltola.com/</url>
+        <name>Example Company</name>
+        <url>http://www.example.com/</url>
     </organization>
 
     <name>gdoc</name>
-    <description>Google Documents On Confluence.</description>
+    <description>This is the fi.viljami.confluence:gdoc plugin for Atlassian Confluence.</description>
     <packaging>atlassian-plugin</packaging>
 
+<!--
+    <repositories>
+        <repository>
+            <id>google-api-services</id>
+            <url>https://oss.sonatype.org/content/repositories/releases/</url>
+        </repository>
+    
+        <repository>
+            <id>google-api-services-beta</id>
+            <url>http://google-api-client-libraries.appspot.com/mavenrepo</url>
+        </repository>
+    
+    </repositories>
+-->
     <dependencies>
         <dependency>
             <groupId>junit</groupId>
@@ -32,6 +46,18 @@
             <scope>provided</scope>
         </dependency>
 
+        <dependency>
+            <groupId>com.google.apis</groupId>
+            <artifactId>google-api-services-drive</artifactId>
+            <version>v2-rev75-1.15.0-rc</version>
+        </dependency>
+        
+        <dependency>
+            <groupId>com.google.http-client</groupId>
+            <artifactId>google-http-client-jackson2</artifactId>
+            <version>1.14.1-beta</version>
+        </dependency>
+            
         <!-- WIRED TEST RUNNER DEPENDENCIES -->
         <dependency>
             <groupId>com.atlassian.plugins</groupId>

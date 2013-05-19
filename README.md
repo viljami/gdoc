@@ -27,9 +27,17 @@ Full documentation is always available at:
 
 https://developer.atlassian.com/display/DOCS/Introduction+to+the+Atlassian+Plugin+SDK
 
+## TODO:
+ * Smart user management for oauth
+ * smart token management (refresh)
+ * How macro will react when there is multiple macros on same page.
+ * Save Gdocs to page (and let user to choose which)
+ * Show fully embedded documents 
+ * Edit embedded documents
+ * Define a purpose for the plugin...
+
 ## Other
 
- * https://developer.atlassian.com/display/CONFDEV/Writing+Macros+for+Pre-4.0+Versions+of+Confluence
  * http://lsd.luminis.eu/en/developing-a-confluence-plugin/
  * https://developer.atlassian.com/display/JIRADEV/JIRA+REST+API+Example+-+OAuth+authentication
 
@@ -37,7 +45,7 @@ https://developer.atlassian.com/display/DOCS/Introduction+to+the+Atlassian+Plugi
 
 Copyright (c) 2013 Viljami Peltola.
  
-Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except
+Licensed under the Apache License, Version 2.0 (the "License"); you may not use this project except
 in compliance with the License. You may obtain a copy of the License at
  
 http://www.apache.org/licenses/LICENSE-2.0

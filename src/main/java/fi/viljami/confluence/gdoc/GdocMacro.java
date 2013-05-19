@@ -66,7 +66,7 @@ public class GdocMacro implements Macro
                 }
             });
         }
-        catch (XhtmlException e)
+        catch ( XhtmlException e )
         {
             throw new MacroExecutionException(e);
         }
@@ -74,13 +74,9 @@ public class GdocMacro implements Macro
         StringBuilder builder = new StringBuilder();
         builder.append("<div id=\"gdoc-macro-container\">");
         builder.append("<p class=\"bold\">Google Documents On Confluence</p>");
-        if (!macros.isEmpty())
+        if ( !macros.isEmpty() )
         {
         	builder.append("<p><a href=\"" + getConnectGoogleURL() + "\" target=\"_blank\">Google Authenticate.</a></p>");
-        }
-        else
-        {
-            builder.append("<p>Google Documents on Confluence.</p>");
         }
         builder.append("</div>");
 
